@@ -3,8 +3,10 @@
 // Stack 클래스 재구현
 class Stack {
     constructor() {
+        this._init();
+    }
+    _init() {
         this.dataStore = [];
-        this.top = 0;
     }
     push(element) {
         this.dataStore.push(element);
@@ -16,7 +18,7 @@ class Stack {
         return this.dataStore.pop();
     }
     clear() {
-        this.dataStore = [];
+        this._init();
     }
     length() {
         return this.dataStore.length;
